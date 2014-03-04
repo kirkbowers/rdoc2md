@@ -10,6 +10,9 @@ file in Rdoc format.  Github expects a README.md file to display nicely on the w
 This utility lets you make the .txt file the master and autogenerate the .md version
 without Repeating Yourself.
 
+Incidentally, if you are reading this on github, this README was produced by `rdoc2md`.
+Kinda meta, eh?
+
 ## Usage
 
 To use `rdoc2md`, first install it:
