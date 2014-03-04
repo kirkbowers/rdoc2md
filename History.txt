@@ -1,0 +1,6 @@
+=== 0.1.0 / 2014-03-03
+
+* First iteration at this gem.  Quick and dirty.  Probably doesn't cover all possible
+  scenarios exhaustively, but it works for converting a typical README.txt file created
+  by hoe into a README.md file that github expects.
+

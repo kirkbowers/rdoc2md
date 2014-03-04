@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'rdoc2md'
+
+def usage
+  puts <<EOF
+rdoc2md <infile>
+
+    Converts the input file from an Rdoc style text file to a markdown file.  
+    The results are sent to stdout.
+    It expects the input file to be a "README" type file with no hash marks 
+    preceding the Rdoc mark ups.
+EOF
+
+  abort
+end
+
+usage unless ARGV.length == 1
+  
+text = File.open(ARGV[0]).read
+# Protect against goofy carriage returns on non-unix systems
+text.gsub!(/\r\n?/, "\n")
+
+print Rdoc2md::Document.new(text).to_md
+
