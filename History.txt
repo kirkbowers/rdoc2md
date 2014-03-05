@@ -4,3 +4,7 @@
   scenarios exhaustively, but it works for converting a typical README.txt file created
   by hoe into a README.md file that github expects.
 
+=== 0.1.1 / 2014-03-04
+
+* Fixed a minor bug where C++ in a rdoc file would become C`` in an md file.
+

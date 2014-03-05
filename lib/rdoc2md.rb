@@ -1,6 +1,6 @@
 
 module Rdoc2md
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
   
   # Rdoc2md::Document takes a String representing a document in Rdoc format (sans leading
   # hashmark comments) and converts it into a similar markdown document.
