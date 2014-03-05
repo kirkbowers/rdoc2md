@@ -41,7 +41,7 @@ module Rdoc2md
           result.gsub!(/(\A|[^\\\*])\*([^\*]*[^\*\\])\*/, '\1**\2**')
 
           # Convert inline code spans to use backticks
-          result.gsub!(/(\A|[^\\])\+([^\+]*)\+/, '\1`\2`')
+          result.gsub!(/(\A|[^\\])\+([^\+]+)\+/, '\1`\2`')
 
           # Convert bare http:, mailto: and ftp: links
           result.gsub!(/(\A|\s)(http:|https:|mailto:|ftp:)(\S*)/, '\1[\2\3](\2\3)')

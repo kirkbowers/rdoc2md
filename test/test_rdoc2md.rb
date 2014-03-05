@@ -187,6 +187,15 @@ EOF
     end
 
 
+    should "leave backslashed typewriter untouched when describing C++" do
+      text = <<EOF
+This is C++
+EOF
+      result = Rdoc2md::Document.new(text).to_md
+      assert_equal text, result
+    end
+
+
     should "convert bare http reference to square bracketed with url as label" do
       text = <<EOF
 Ruby : http://www.ruby-lang.org
