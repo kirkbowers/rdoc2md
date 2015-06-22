@@ -13,6 +13,8 @@ without Repeating Yourself.
 Incidentally, if you are reading this on github, this README was produced by +rdoc2md+.
 Kinda meta, eh?
 
+<a href="https://www.omniref.com/ruby/gems/rdoc2md"><img src="https://www.omniref.com/ruby/gems/rdoc2md.png" alt="rdoc2md API Documentation" /></a>
+
 == Usage
 
 To use +rdoc2md+, first install it:

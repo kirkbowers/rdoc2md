@@ -1,7 +1,8 @@
+require 'minitest'
 require "shoulda-context"
 require "rdoc2md"
 
-class TestRdoc2md < Test::Unit::TestCase
+class TestRdoc2md < Minitest::Test
   context "When converting non-commented text" do
     should "leave dashed bulleted lists untouched" do
       text = <<EOF
@@ -315,6 +316,19 @@ EOF
 
       expected = <<EOF
 Visit the [Ruby website](http://www.ruby-lang.com)
+EOF
+
+      result = Rdoc2md::Document.new(text).to_md
+      assert_equal expected, result
+    end
+
+    should "convert {label}[url] references on beginning of the line" do
+      text = <<EOF
+{Visit the Ruby website}[http://www.ruby-lang.com]
+EOF
+
+      expected = <<EOF
+[Visit the Ruby website](http://www.ruby-lang.com)
 EOF
 
       result = Rdoc2md::Document.new(text).to_md
